@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 100vh;
+        background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+      }
+      .hover_wrap {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .effect {
+        width: 400px;
+        height: 266px;
+        margin: 10px;
+        position: relative;
+        perspective: 1000px;
+        /* transform-style: preserve-3d; */
+      }
+      .effect img {
+        display: block;
+        width: 100%;
+      }
+      .effect .front {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        transform-style: preserve-3d;
+      }
+
+      .effect .back {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform-style: preserve-3d;
+      }
+      /* figcaption */
+      figcaption {
+        width: 80%;
+        padding: 4%;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.5);
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        backface-visibility: hidden;
+        transform: translate(-50%, -50%) translateZ(100px);
+      }
+
+      /* hover1 */
+      .hover1 .front {
+        transition: all 1s;
+        backface-visibility: hidden;
+        transform: rotateY(0);
+      }
+      .hover1:hover .front {
+        transform: rotateY(180deg);
+      }
+
+      .hover1 .back {
+        transition: all 1s;
+        backface-visibility: hidden;
+        transform: rotateY(-180deg);
+      }
+      .hover1:hover .back {
+        transform: rotateY(0);
+      }
+
+      /* hover2 */
+      .hover2 .front {
+        transform: rotateX(0);
+        transition: all 1s;
+        backface-visibility: hidden;
+      }
+      .hover2:hover .front {
+        transform: rotateX(180deg);
+      }
+
+      .hover2 .back {
+        transition: all 1s;
+        backface-visibility: hidden;
+        transform: rotateX(-180deg);
+      }
+      .hover2:hover .back {
+        transform: rotateX(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hover_wrap">
+      <div class="effect hover1">
+        <figure class="front">
+          <img src="img/anita-austvika-RowgzTw_cTo-unsplash.jpg" alt="" />
+          <figcaption>
+            <h3>MOUSE OVER</h3>
+            <p>마우스 오버효과 "앞면"입니다</p>
+          </figcaption>
+        </figure>
+        <figure class="back">
+          <img src="img/chang-ko-Nr4ZRsTPw4Y-unsplash.jpg" alt="" />
+          <figcaption>
+            <h3>MOUSE OVER</h3>
+            <p>마우스 오버효과 "뒷면"입니다</p>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="effect hover2">
+        <figure class="front">
+          <img src="img/neom-e75CfMG0Sgo-unsplash.jpg" alt="" />
+          <figcaption>
+            <h3>MOUSE OVER</h3>
+            <p>마우스 오버효과 "앞면"입니다</p>
+          </figcaption>
+        </figure>
+        <figure class="back">
+          <img src="img/neom-V8w0gSmxajY-unsplash.jpg" alt="" />
+          <figcaption>
+            <h3>MOUSE OVER</h3>
+            <p>마우스 오버효과 "뒷면"입니다</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+      }
+      .hover_wrap {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      figure {
+        width: 400px;
+        margin: 10px;
+        overflow: hidden;
+        position: relative;
+        background-color: #fff;
+      }
+      figure img {
+        display: block;
+        width: 100%;
+      }
+      figure:hover img {
+        opacity: 0.3;
+      }
+      figcaption {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: #000;
+        color: #fff;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        /* left: 50%;
+        top: 50%; */
+        /* transform: translate(-50%, -50%); */
+      }
+
+      figure.hover1 figcaption {
+        left: 120%;
+        top: 50%;
+        transition: all 0.5s;
+        transform: translate(-50%, -50%) rotate(0);
+        opacity: 0;
+      }
+      figure.hover1:hover figcaption {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-360deg);
+        opacity: 1;
+      }
+
+      figure.hover2 figcaption {
+        left: -20%;
+        top: 50%;
+        transition: all 0.5s;
+        transform: translate(-50%, -50%) rotate(0);
+        opacity: 0;
+      }
+      figure.hover2:hover figcaption {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(360deg);
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hover_wrap">
+      <figure class="hover1">
+        <img src="img/neom-e75CfMG0Sgo-unsplash.jpg" alt="" />
+        <figcaption>MOUSE OVER</figcaption>
+      </figure>
+
+      <figure class="hover2">
+        <img src="img/neom-V8w0gSmxajY-unsplash.jpg" alt="" />
+        <figcaption>MOUSE OVER</figcaption>
+      </figure>
+    </div>
+  </body>
+</html>
